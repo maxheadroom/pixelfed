@@ -39,7 +39,7 @@ RUN apt-get update \
       ffmpeg \
 ## Database
       libpq-dev \
-#      libsqlite3-dev \
+      libsqlite3-dev \
       mariadb-client \
 # Locales Update
   && sed -i '/en_US/s/^#//g' /etc/locale.gen \
