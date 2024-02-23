@@ -38,7 +38,7 @@ RUN apt-get update \
 ## Video Processing
       ffmpeg \
 ## Database
-#      libpq-dev \
+      libpq-dev \
 #      libsqlite3-dev \
       mariadb-client \
 # Locales Update
@@ -62,7 +62,7 @@ RUN apt-get update \
   && docker-php-ext-enable redis \
 #PHP Database extensions
   && docker-php-ext-install pdo_mysql \
-#pdo_pgsql pdo_sqlite \
+  pdo_pgsql pdo_sqlite \
 #PHP extensions (dependencies)
   && docker-php-ext-configure intl \
   && docker-php-ext-install -j$(nproc) intl bcmath zip pcntl exif curl \
